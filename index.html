@@ -4,18 +4,29 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Pedro & Juan</title>
-  <meta name="description" content="Pedro & Juan é dupla sertaneja brasileira de Paulínia-SP. Ouça Quase Tudo e contrate shows.">
+  <meta name="description" content="Pedro & Juan é dupla sertaneja brasileira de Paulínia-SP. Ouça e contrate shows.">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
+  <!-- Botão fixo de contratação -->
+  <div class="fixed-top d-flex justify-content-center justify-content-md-end p-3" style="pointer-events: none; z-index: 1050;">
+      <a href="#contato" class="btn btn-outline-beige shadow-lg" style="pointer-events: auto; background-color: var(--black);">CONTRATE PEDRO & JUAN</a>
+  </div>
+
   <div class="container-fluid text-center p-0">
     <!-- Hero / Vídeo -->
     <header class="hero-section section-panel">
-      <div class="hero-inner reveal-on-scroll is-visible">
-        <p class="hero-kicker">Pedro &amp; Juan</p>
-        <h1 class="hero-heading">Quase Tudo</h1>
-        <div class="hero-video-frame">
+      <div class="hero-inner reveal-on-scroll is-visible mt-4">
+        <p class="hero-kicker">Sertanejo</p>
+        <h1 class="hero-heading">PEDRO &amp; JUAN</h1>
+        <p class="text-white fs-5 mb-4" style="text-shadow: 1px 1px 4px rgba(0,0,0,0.8);">Dois estilos. Uma só paixão: fazer história através da música.</p>
+        <div class="d-flex flex-column flex-md-row justify-content-center gap-3 mb-5">
+          <a href="#playlist" class="btn btn-outline-beige">🎧 Ouça agora</a>
+          <a href="#agenda" class="btn btn-outline-beige">📅 Confira a agenda</a>
+          <a href="#contato" class="btn btn-outline-beige">🎤 Contrate a dupla</a>
+        </div>
+        <div class="hero-video-frame mt-3">
           <div class="ratio ratio-16x9 hero-video">
             <video controls>
               <source src="images/video/video-home.mp4" type="video/mp4">
@@ -27,18 +38,19 @@
       <div class="streaming-bar">
         <ul class="nav justify-content-center platform-icons my-lg-4">
           <li class="nav-item"><a class="nav-link" href="https://youtu.be/xteU75p4AHs" target="_blank" rel="noopener"><img src="images/icons/logo-youtube.svg" alt="YouTube"></a></li>
-          <li class="nav-item"><a class="nav-link" href="https://open.spotify.com/intl-pt/artist/29qB5nRUcdhG0gnx6bV9qh?si=Pn3Ez6cyTriQKPzn3bIgIw" target="_blank" rel="noopener"><img src="images/icons/logo-spotify.svg" alt="Spotify"></a></li>
+          <li class="nav-item"><a class="nav-link" href="https://open.spotify.com/intl-pt/artist/29qB5nRUcdhG0gnx6bV9qh" target="_blank" rel="noopener"><img src="images/icons/logo-spotify.svg" alt="Spotify"></a></li>
           <li class="nav-item"><a class="nav-link" href="https://link.deezer.com/s/341YbrVHOEkInRmdgytSt" target="_blank" rel="noopener"><img src="images/icons/logo-deezer.svg" alt="Deezer"></a></li>
-          <li class="nav-item"><a class="nav-link" href="https://music.amazon.com.br/artists/B0FLMQ96Y3/pedro-juan?marketplaceId=ART4WZ8MWBX2Y&musicTerritory=BR&ref=dm_sh_7P2KThqp5dxd0ejkPLOzdiFhr" target="_blank" rel="noopener"><img src="images/icons/logo-amazon.svg" width="80" alt="Amazon Music"></a></li>
+          <li class="nav-item"><a class="nav-link" href="#" target="_blank" rel="noopener"><img src="images/icons/logo-amazon.svg" width="80" alt="Amazon Music"></a></li>
         </ul>
       </div>
     </header>
+
     <!-- Biografia -->
     <section id="release" class="section-bio section-panel">
       <div class="bio-desktop reveal-on-scroll">
         <div class="bio-card bio-card-desktop">
           <div class="bio-card-header">
-            <h2 class="bio-title">Biografia</h2>
+            <h2 class="bio-title">A Dupla</h2>
             <div class="bio-social-icons" aria-label="Redes sociais">
               <a href="https://www.tiktok.com/@pedroejuanoficial" target="_blank" rel="noopener"><img src="images/icons/ico-tiktok-w.svg" alt="TikTok"></a>
               <a href="https://www.instagram.com/pedroejuanoficial/" target="_blank" rel="noopener"><img src="images/icons/ico-instagram-w.svg" alt="Instagram"></a>
@@ -52,8 +64,14 @@
             <span>Paulínia-SP</span>
           </p>
           <div class="bio-copy">
-            <p>Pedro &amp; Juan são uma dupla sertaneja de Paulínia-SP, unindo talento, vozes marcantes e autenticidade para levar música ao público de todo o Brasil.</p>
-            <p>Com o lançamento de <strong>Quase Tudo</strong>, a dupla consolida sua trajetória no cenário sertanejo, disponível nas principais plataformas digitais.</p>
+            <p>Pedro &amp; Juan nasceram da união de duas vozes, duas personalidades e uma paixão em comum: o sertanejo.</p>
+            <p>Com uma proposta jovem e autêntica, a dupla mistura a essência do sertanejo com muita energia e conexão com o público.</p>
+            <p>Nos palcos, Pedro &amp; Juan transformam cada apresentação em uma experiência, levando música, emoção e aquela energia que faz todo mundo cantar junto.</p>
+          </div>
+          <div class="d-flex gap-3 mt-4">
+            <!-- Fotos Individuais -->
+            <img src="images/cantores/0000-103.jpg" class="img-fluid rounded" style="width: 50%; object-fit: cover; aspect-ratio: 1/1;" alt="Pedro">
+            <img src="images/cantores/0000-105.jpg" class="img-fluid rounded" style="width: 50%; object-fit: cover; aspect-ratio: 1/1;" alt="Juan">
           </div>
           <div class="bio-actions">
             <a class="bio-social-button" href="https://www.instagram.com/pedroejuanoficial/" target="_blank" rel="noopener"><img src="images/icons/ico-instagram-w.svg" alt="">Instagram</a>
@@ -66,7 +84,7 @@
         <div class="bio-card bio-card-mobile">
           <span class="bio-card-grip" aria-hidden="true"></span>
           <div class="bio-card-header">
-            <h2 class="bio-title">Biografia</h2>
+            <h2 class="bio-title">A Dupla</h2>
             <div class="bio-social-icons" aria-label="Redes sociais">
               <a href="https://www.tiktok.com/@pedroejuanoficial" target="_blank" rel="noopener"><img src="images/icons/ico-tiktok-w.svg" alt="TikTok"></a>
               <a href="https://www.instagram.com/pedroejuanoficial/" target="_blank" rel="noopener"><img src="images/icons/ico-instagram-w.svg" alt="Instagram"></a>
@@ -80,8 +98,14 @@
             <span>Paulínia-SP</span>
           </p>
           <div class="bio-copy">
-            <p>Pedro &amp; Juan são uma dupla sertaneja de Paulínia-SP, unindo talento, vozes marcantes e autenticidade para levar música ao público de todo o Brasil.</p>
-            <p>Com o lançamento de <strong>Quase Tudo</strong>, a dupla consolida sua trajetória no cenário sertanejo.</p>
+            <p>Pedro &amp; Juan nasceram da união de duas vozes, duas personalidades e uma paixão em comum: o sertanejo.</p>
+            <p>Com uma proposta jovem e autêntica, a dupla mistura a essência do sertanejo com muita energia e conexão com o público.</p>
+            <p>Nos palcos, Pedro &amp; Juan transformam cada apresentação em uma experiência, levando música, emoção e aquela energia que faz todo mundo cantar junto.</p>
+          </div>
+          <div class="d-flex gap-2 mt-3 mb-2">
+            <!-- Fotos Individuais -->
+            <img src="images/cantores/0000-103.jpg" class="img-fluid rounded" style="width: 50%; object-fit: cover; aspect-ratio: 1/1;" alt="Pedro">
+            <img src="images/cantores/0000-105.jpg" class="img-fluid rounded" style="width: 50%; object-fit: cover; aspect-ratio: 1/1;" alt="Juan">
           </div>
           <a class="bio-mobile-button" href="https://www.instagram.com/pedroejuanoficial/" target="_blank" rel="noopener">
             <span>Conheça a dupla</span><span aria-hidden="true">→</span>
@@ -89,65 +113,173 @@
         </div>
       </div>
     </section>
-    <!-- Agenda de Shows -->
-    <section id="agenda" class="section-agenda section-panel">
-      <div class="agenda-inner reveal-on-scroll">
-        <div class="agenda-header">
-          <h2 class="agenda-title">Agenda de Shows</h2>
-          <span class="agenda-month">Agosto 2026</span>
-        </div>
-        <div class="agenda-divider"></div>
-        <div class="agenda-grid">
-          <div class="agenda-col">
-            <div class="show-item"><span class="show-date">01/08</span><span class="show-location">Paulínia/SP</span></div>
-            <div class="show-item"><span class="show-date">08/08</span><span class="show-location">Campinas/SP</span></div>
-            <div class="show-item"><span class="show-date">15/08</span><span class="show-location">Sumaré/SP</span></div>
-            <div class="show-item"><span class="show-date">22/08</span><span class="show-location">Valinhos/SP</span></div>
-            <div class="show-item"><span class="show-date">29/08</span><span class="show-location">Americana/SP</span></div>
-          </div>
-          <div class="agenda-col">
-            <div class="show-item"><span class="show-date">05/08</span><span class="show-location">São Paulo/SP (privado)</span></div>
-            <div class="show-item"><span class="show-date">12/08</span><span class="show-location">Jaguariúna/SP</span></div>
-            <div class="show-item"><span class="show-date">19/08</span><span class="show-location">Limeira/SP</span></div>
-            <div class="show-item"><span class="show-date">26/08</span><span class="show-location">Indaiatuba/SP</span></div>
-            <div class="show-item"><span class="show-date">30/08</span><span class="show-location">Hortolândia/SP</span></div>
-          </div>
-        </div>
-      </div>
-    </section>
+
     <!-- Ouça Agora -->
     <section id="playlist" class="section-playlist section-panel">
       <div class="playlist-inner reveal-on-scroll">
         <div class="playlist-album">
-          <img src="images/test/album.png" class="img-fluid album-cover" alt="Quase Tudo - Pedro & Juan">
+          <img src="images/test/album.png" class="img-fluid album-cover" alt="Pedro & Juan">
         </div>
-        <div class="playlist-content">
-          <h2 class="section-title section-title-compact">Ouça Agora</h2>
-          <ul class="nav justify-content-center platform-icons-light">
-            <li class="nav-item"><a class="nav-link" href="https://youtu.be/xteU75p4AHs" target="_blank" rel="noopener"><img src="images/icons/logo-youtube.svg" alt="YouTube"></a></li>
-            <li class="nav-item"><a class="nav-link" href="https://open.spotify.com/intl-pt/artist/29qB5nRUcdhG0gnx6bV9qh?si=Pn3Ez6cyTriQKPzn3bIgIw" target="_blank" rel="noopener"><img src="images/icons/logo-spotify.svg" alt="Spotify"></a></li>
-            <li class="nav-item"><a class="nav-link" href="https://link.deezer.com/s/341YbrVHOEkInRmdgytSt" target="_blank" rel="noopener"><img src="images/icons/logo-deezer.svg" alt="Deezer"></a></li>
-            <li class="nav-item"><a class="nav-link" href="https://music.amazon.com.br/artists/B0FLMQ96Y3/pedro-juan?marketplaceId=ART4WZ8MWBX2Y&musicTerritory=BR&ref=dm_sh_7P2KThqp5dxd0ejkPLOzdiFhr" target="_blank" rel="noopener"><img src="images/icons/logo-amazon.svg" width="80" alt="Amazon Music"></a></li>
-          </ul>
+        <div class="playlist-content text-start text-md-center">
+          <h2 class="section-title section-title-compact" style="font-size: clamp(2.3rem, 5vw, 3rem);">OUÇA PEDRO &amp; JUAN</h2>
+          
+          <div class="mt-4 mb-4">
+             <h4 class="text-beige text-uppercase mb-3 fs-5">🎵 Lançamento Atual</h4>
+             <a href="https://open.spotify.com/intl-pt/artist/29qB5nRUcdhG0gnx6bV9qh" target="_blank" rel="noopener" class="btn btn-outline-beige d-inline-flex align-items-center justify-content-center gap-2 w-100">
+                ▶️ Ouça no Spotify
+             </a>
+          </div>
+
+          <hr class="border-secondary my-4" style="opacity: 0.2;">
+
+          <div class="mt-2">
+             <h4 class="text-beige text-uppercase mb-3 fs-6">Outros trabalhos</h4>
+             <ul class="nav justify-content-md-center platform-icons-light" style="margin-left: -0.5rem;">
+               <li class="nav-item"><a class="nav-link" href="https://youtu.be/xteU75p4AHs" target="_blank" rel="noopener"><img src="images/icons/logo-youtube.svg" alt="YouTube"></a></li>
+               <li class="nav-item"><a class="nav-link" href="https://open.spotify.com/intl-pt/artist/29qB5nRUcdhG0gnx6bV9qh" target="_blank" rel="noopener"><img src="images/icons/logo-spotify.svg" alt="Spotify"></a></li>
+               <li class="nav-item"><a class="nav-link" href="https://link.deezer.com/s/341YbrVHOEkInRmdgytSt" target="_blank" rel="noopener"><img src="images/icons/logo-deezer.svg" alt="Deezer"></a></li>
+               <li class="nav-item"><a class="nav-link" href="#" target="_blank" rel="noopener"><img src="images/icons/logo-amazon.svg" width="80" alt="Amazon Music"></a></li>
+             </ul>
+          </div>
+
         </div>
       </div>
     </section>
-    <!-- Contato -->
-    <section id="contato" class="section-contato section-panel">
-      <div class="contato-inner reveal-on-scroll">
-        <div class="contato-info">
-          <h2 class="section-title section-title-compact">Contato</h2>
-          <h4 class="contact-label">shows:</h4>
-          <h1 class="contact-phone"><a href="tel:+5519992150464">(19) 99215-0464</a></h1>
-          <p class="contact-email">
-            <a href="mailto:pedroejuanoficial@gmail.com">pedroejuanoficial@gmail.com</a>
-          </p>
-          <p class="contact-presskit">
-            <a href="https://drive.google.com/drive/folders/1bhYREdJFTLdGEmDWIppY174T4urlELK-" target="_blank" rel="noopener" class="btn btn-outline-beige btn-lg">baixar press kit</a>
-          </p>
-          <img src="images/cantores/logo.png" class="img-fluid contact-logo-photo" alt="Pedro & Juan">
+
+    <!-- Shows -->
+    <section id="shows" class="section-bio section-panel d-flex align-items-center" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('images/cantores/0000-300.jpg'); background-position: center 30%; padding: 6rem 1rem;">
+      <div class="container reveal-on-scroll">
+        <div class="bio-card bio-card-desktop w-100 text-center mx-auto" style="max-width: 800px;">
+          <h2 class="bio-title text-center" style="font-size: clamp(2.2rem, 5vw, 3.5rem);">Um Show para cada momento</h2>
+          <div class="bio-copy mt-4 text-center">
+            <p class="fs-5">Do palco de grandes eventos às festas mais especiais, Pedro &amp; Juan levam um repertório pensado para cantar, dançar e criar memórias.</p>
+          </div>
+          <div class="d-flex flex-wrap justify-content-center gap-2 gap-md-3 mt-4">
+             <span class="badge rounded-pill border border-secondary text-white p-2 p-md-3 fs-6 bg-black bg-opacity-75">🎪 Rodeios e festas de peão</span>
+             <span class="badge rounded-pill border border-secondary text-white p-2 p-md-3 fs-6 bg-black bg-opacity-75">🎓 Universitários</span>
+             <span class="badge rounded-pill border border-secondary text-white p-2 p-md-3 fs-6 bg-black bg-opacity-75">💍 Casamentos</span>
+             <span class="badge rounded-pill border border-secondary text-white p-2 p-md-3 fs-6 bg-black bg-opacity-75">🏢 Eventos corporativos</span>
+             <span class="badge rounded-pill border border-secondary text-white p-2 p-md-3 fs-6 bg-black bg-opacity-75">🎉 Festas particulares</span>
+             <span class="badge rounded-pill border border-secondary text-white p-2 p-md-3 fs-6 bg-black bg-opacity-75">🎤 Casas de shows</span>
+             <span class="badge rounded-pill border border-secondary text-white p-2 p-md-3 fs-6 bg-black bg-opacity-75">🏛️ Eventos municipais</span>
+          </div>
         </div>
-        
+      </div>
+    </section>
+
+    <!-- Agenda de Shows -->
+    <section id="agenda" class="section-agenda section-panel">
+      <div class="agenda-inner reveal-on-scroll">
+        <div class="agenda-header flex-wrap">
+          <h2 class="agenda-title" style="font-size: clamp(2.5rem, 7vw, 4.5rem);">Próximos Shows</h2>
+        </div>
+        <div class="agenda-divider"></div>
+        <div class="agenda-grid">
+          <div class="agenda-col">
+            <div class="show-item"><span class="show-date">12 OUT</span><span class="show-location">📍 São Paulo – SP<br><span class="text-beige text-capitalize" style="font-size: 0.8em; letter-spacing: normal;">Festa XXX</span></span></div>
+            <div class="show-item"><span class="show-date">18 OUT</span><span class="show-location">📍 Campinas – SP<br><span class="text-beige text-capitalize" style="font-size: 0.8em; letter-spacing: normal;">Evento XXX</span></span></div>
+          </div>
+          <div class="agenda-col">
+            <div class="show-item"><span class="show-date">25 OUT</span><span class="show-location">📍 Sorocaba – SP<br><span class="text-beige text-capitalize" style="font-size: 0.8em; letter-spacing: normal;">XXX</span></span></div>
+          </div>
+        </div>
+        <div class="mt-5 pt-3 text-center w-100">
+           <a href="#contato" class="btn btn-outline-beige bg-black">Ver agenda completa</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galeria -->
+    <section id="galeria" class="section-panel py-5" style="background-color: var(--black);">
+       <div class="container-fluid reveal-on-scroll mt-5 mb-5">
+          <h2 class="section-title text-center mb-5">Galeria</h2>
+          <div class="row g-4 px-3 px-md-5 justify-content-center">
+             <div class="col-12 col-sm-6 col-lg-4">
+                <img src="images/cantores/0000-103.jpg" class="img-fluid rounded shadow w-100" style="aspect-ratio: 4/5; object-fit: cover;" alt="Galeria Pedro & Juan">
+             </div>
+             <div class="col-12 col-sm-6 col-lg-4">
+                <img src="images/cantores/0000-123.jpg" class="img-fluid rounded shadow w-100" style="aspect-ratio: 4/5; object-fit: cover;" alt="Galeria Bastidores">
+             </div>
+             <div class="col-12 col-sm-6 col-lg-4">
+                <img src="images/cantores/0000-316.jpg" class="img-fluid rounded shadow w-100" style="aspect-ratio: 4/5; object-fit: cover;" alt="Galeria Show">
+             </div>
+          </div>
+       </div>
+    </section>
+
+    <!-- Redes Sociais -->
+    <section id="redes-sociais" class="section-panel py-5" style="background-color: #111;">
+       <div class="container text-center reveal-on-scroll py-4">
+          <h2 class="section-title mb-3" style="font-size: clamp(2.5rem, 5vw, 4rem);">Vem com a gente!</h2>
+          <div class="d-flex flex-wrap justify-content-center gap-3 gap-md-5 mb-5">
+             <a href="https://www.instagram.com/pedroejuanoficial/" target="_blank" rel="noopener" class="text-beige text-decoration-none fs-5 d-flex align-items-center gap-2"><img src="images/icons/ico-instagram-w.svg" alt="Instagram" style="width:24px; filter: brightness(0) sepia(1) hue-rotate(10deg) saturate(3);"> Instagram</a>
+             <a href="https://www.tiktok.com/@pedroejuanoficial" target="_blank" rel="noopener" class="text-beige text-decoration-none fs-5 d-flex align-items-center gap-2"><img src="images/icons/ico-tiktok-w.svg" alt="TikTok" style="width:24px; filter: brightness(0) sepia(1) hue-rotate(10deg) saturate(3);"> TikTok</a>
+             <a href="https://youtu.be/xteU75p4AHs" target="_blank" rel="noopener" class="text-beige text-decoration-none fs-5 d-flex align-items-center gap-2"><img src="images/icons/logo-youtube.svg" alt="YouTube" style="width:28px; filter: brightness(0) sepia(1) hue-rotate(10deg) saturate(3);"> YouTube</a>
+             <a href="https://open.spotify.com/intl-pt/artist/29qB5nRUcdhG0gnx6bV9qh" target="_blank" rel="noopener" class="text-beige text-decoration-none fs-5 d-flex align-items-center gap-2"><img src="images/icons/logo-spotify.svg" alt="Spotify" style="width:28px; filter: brightness(0) sepia(1) hue-rotate(10deg) saturate(3);"> Spotify</a>
+          </div>
+          <!-- Instagram Feed Placeholder -->
+          <div class="bg-black p-4 p-md-5 rounded border border-secondary mx-auto" style="max-width: 800px; min-height: 250px; display: flex; align-items: center; justify-content: center;">
+             <p class="text-muted m-0"><em>[ Feed do Instagram integrado aqui ]</em></p>
+          </div>
+       </div>
+    </section>
+
+    <!-- Contato / Contratação -->
+    <section id="contato" class="section-contato section-panel align-items-stretch p-0" style="min-height: auto;">
+      <div class="contato-inner reveal-on-scroll w-100 m-0" style="max-width: none;">
+        <div class="contato-info bg-black bg-opacity-75 p-4 p-md-5 flex-grow-1 d-flex flex-column justify-content-center align-items-center" style="max-width: none; min-height: var(--section-contato-h); backdrop-filter: blur(5px);">
+          
+          <div style="max-width: 800px; width: 100%;">
+            <h2 class="section-title text-center mb-2" style="font-size: clamp(2.5rem, 6vw, 4rem);">Quer levar Pedro &amp; Juan para o seu evento?</h2>
+            <p class="text-white fs-5 text-center mb-5">Preencha os dados e nossa equipe entrará em contato.</p>
+            
+            <form action="#" method="POST" class="text-start">
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label class="form-label text-beige">Nome</label>
+                  <input type="text" class="form-control bg-dark text-white border-secondary" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label text-beige">E-mail</label>
+                  <input type="email" class="form-control bg-dark text-white border-secondary" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label text-beige">Telefone/WhatsApp</label>
+                  <input type="tel" class="form-control bg-dark text-white border-secondary" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label text-beige">Cidade</label>
+                  <input type="text" class="form-control bg-dark text-white border-secondary" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label text-beige">Evento</label>
+                  <input type="text" class="form-control bg-dark text-white border-secondary" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label text-beige">Data</label>
+                  <input type="date" class="form-control bg-dark text-white border-secondary">
+                </div>
+                <div class="col-12">
+                  <label class="form-label text-beige">Mensagem</label>
+                  <textarea class="form-control bg-dark text-white border-secondary" rows="3"></textarea>
+                </div>
+                <div class="col-12 text-center mt-4">
+                  <button type="submit" class="btn btn-outline-beige btn-lg w-100" style="max-width: 400px;">SOLICITAR ORÇAMENTO</button>
+                </div>
+              </div>
+            </form>
+
+            <div class="mt-5 pt-4 text-center border-top border-secondary">
+              <img src="images/cantores/logo.png" class="img-fluid contact-logo-photo mb-4" alt="Pedro & Juan" style="max-width: 150px;">
+              <h1 class="contact-phone mb-1"><a href="tel:+5519992150464">(19) 99215-0464</a></h1>
+              <p class="contact-email mb-4"><a href="mailto:pedroejuanoficial@gmail.com">pedroejuanoficial@gmail.com</a></p>
+              <p class="contact-presskit">
+                <a href="https://drive.google.com/drive/folders/1bhYREdJFTLdGEmDWIppY174T4urlELK-" target="_blank" rel="noopener" class="btn btn-outline-beige">baixar press kit</a>
+              </p>
+            </div>
+          </div>
+
+        </div>
       </div>
     </section>
   </div>
