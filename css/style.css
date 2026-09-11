@@ -1157,6 +1157,18 @@ html {
 .galeria-item:hover .galeria-photo {
   transform: scale(1.04);
 }
+/* Vídeos na galeria — ocupam 2 colunas para manter proporção 16:9 */
+.galeria-item-video {
+  grid-column: span 2;
+}
+.galeria-video {
+  border-radius: 0;
+  background: var(--black);
+}
+.galeria-video iframe {
+  border: none;
+  display: block;
+}
 
 /* ══════════════════════════════════════════
    ── Seção Redes Sociais ──
@@ -1415,6 +1427,9 @@ html {
     grid-template-columns: 1fr;
     max-width: 480px;
     margin: 0 auto;
+  }
+  .galeria-item-video {
+    grid-column: span 1;
   }
   .social-links {
     gap: 1.25rem;
