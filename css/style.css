@@ -851,3 +851,553 @@ html {
     padding: 0.15rem;
   }
 }
+
+/* ══════════════════════════════════════════
+   ── Botão fixo de contratação (Topbar CTA) ──
+   ══════════════════════════════════════════ */
+.topbar-cta {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.75rem 1.25rem;
+  pointer-events: none;
+  z-index: 1050;
+}
+.topbar-cta-btn {
+  pointer-events: auto;
+  background-color: rgba(10, 10, 10, 0.82);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-color: rgba(212, 196, 168, 0.7);
+  font-size: clamp(0.78rem, 1.5vw, 0.9rem);
+  letter-spacing: 0.1em;
+  padding: 0.5rem 1.25rem;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+.topbar-cta-btn:hover {
+  background-color: rgba(107, 68, 35, 0.72);
+  border-color: var(--beige);
+  color: var(--white);
+}
+
+/* ── Hero: slogan + CTAs ── */
+.hero-inner-padded {
+  padding-top: clamp(3.5rem, 8vw, 5rem);
+}
+.hero-slogan {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(0.95rem, 2vw, 1.15rem);
+  color: var(--beige-light);
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+  margin-bottom: clamp(1.5rem, 3vw, 2rem);
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.7);
+}
+.hero-cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: clamp(1.5rem, 4vw, 2.5rem);
+}
+.hero-cta-group .btn {
+  min-width: 180px;
+  font-size: clamp(0.85rem, 1.6vw, 0.95rem);
+  letter-spacing: 0.07em;
+  padding: 0.65rem 1.5rem;
+}
+
+/* ── Fotos dos integrantes (Bio) ── */
+.members-photos {
+  display: flex;
+  gap: clamp(0.5rem, 2vw, 1rem);
+  margin-top: clamp(1rem, 2.5vw, 1.5rem);
+}
+.member-photo {
+  width: 50%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 1px solid rgba(212, 196, 168, 0.35);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.45);
+}
+.members-photos-sm {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+.members-photos-sm .member-photo {
+  border-radius: 8px;
+}
+
+/* ── Playlist: lançamento e outros trabalhos ── */
+.playlist-release {
+  margin-top: clamp(1.25rem, 3vw, 2rem);
+  margin-bottom: clamp(1rem, 2.5vw, 1.5rem);
+}
+.playlist-label {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(1.1rem, 2.2vw, 1.35rem);
+  color: var(--beige);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+.playlist-label-sm {
+  font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+  margin-bottom: 0.5rem;
+}
+.playlist-spotify-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  font-size: clamp(0.9rem, 1.8vw, 1rem);
+}
+.playlist-divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.12);
+  margin: clamp(1rem, 2.5vw, 1.5rem) 0;
+}
+.playlist-others {
+  margin-top: 0.25rem;
+}
+
+/* ══════════════════════════════════════════
+   ── Seção Shows ──
+   ══════════════════════════════════════════ */
+.section-shows {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: clamp(600px, 70vh, 900px);
+  padding: clamp(5rem, 10vw, 8rem) clamp(1rem, 3vw, 2rem);
+  background-color: var(--black);
+  background-image:
+    linear-gradient(180deg, rgba(10,10,10,0.55) 0%, rgba(10,10,10,0.75) 100%),
+    url('../images/cantores/0000-300.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 30%;
+  overflow: hidden;
+}
+.section-shows::before {
+  top: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(10, 10, 10, 0.92) 0%,
+    transparent 100%
+  );
+}
+.section-shows::after {
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(212, 196, 168, 0.9) 0%,
+    transparent 100%
+  );
+}
+.shows-inner {
+  position: relative;
+  z-index: 3;
+  width: min(100%, 820px);
+  margin: 0 auto;
+  padding: clamp(2rem, 4vw, 3.5rem) clamp(2rem, 5vw, 4rem);
+  text-align: center;
+  background:
+    radial-gradient(circle at 88% 18%, rgba(126, 61, 20, 0.3), transparent 38%),
+    linear-gradient(135deg, rgba(18, 16, 14, 0.83), rgba(45, 26, 15, 0.8));
+  border: 1px solid rgba(221, 170, 104, 0.6);
+  border-radius: 88px 150px 96px 116px / 106px 112px 124px 90px;
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.52);
+  backdrop-filter: blur(10px);
+}
+.shows-title {
+  color: var(--white);
+  font-size: clamp(2.4rem, 5.5vw, 4rem);
+  letter-spacing: 0.07em;
+  line-height: 1.05;
+  margin: 0 0 1rem;
+  text-transform: uppercase;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.5);
+}
+.shows-desc {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(0.9rem, 1.6vw, 1.05rem);
+  color: rgba(255, 255, 255, 0.88);
+  line-height: 1.6;
+  margin: 0 auto clamp(1.5rem, 3vw, 2rem);
+  max-width: 560px;
+}
+.shows-types {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+}
+.show-type-item {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(0.78rem, 1.5vw, 0.9rem);
+  color: var(--white);
+  letter-spacing: 0.04em;
+  padding: 0.5rem 1.1rem;
+  border: 1px solid rgba(212, 196, 168, 0.45);
+  border-radius: 999px;
+  background: rgba(10, 10, 10, 0.55);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  white-space: nowrap;
+}
+.show-type-item:hover {
+  background: rgba(107, 68, 35, 0.4);
+  border-color: var(--beige);
+}
+
+/* ── Agenda: nome do evento + CTA ── */
+.show-event-name {
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(0.7rem, 1.3vw, 0.85rem);
+  color: var(--beige);
+  letter-spacing: 0.02em;
+  text-transform: none;
+  margin-top: 0.2rem;
+}
+.agenda-cta {
+  margin-top: clamp(2rem, 5vw, 3rem);
+  text-align: center;
+}
+.agenda-cta-btn {
+  background-color: var(--black);
+  font-size: clamp(0.9rem, 1.8vw, 1rem);
+  letter-spacing: 0.1em;
+  padding: 0.7rem 2.25rem;
+}
+
+/* ══════════════════════════════════════════
+   ── Seção Galeria ──
+   ══════════════════════════════════════════ */
+.section-galeria {
+  position: relative;
+  isolation: isolate;
+  background-color: var(--black);
+  padding: clamp(4rem, 8vw, 7rem) clamp(1rem, 3vw, 2rem);
+  overflow: hidden;
+}
+.section-galeria::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: clamp(48px, 8vw, 96px);
+  pointer-events: none;
+  z-index: 2;
+  background: linear-gradient(
+    180deg,
+    rgba(212, 196, 168, 0.85) 0%,
+    transparent 100%
+  );
+}
+.section-galeria::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: clamp(48px, 8vw, 96px);
+  pointer-events: none;
+  z-index: 2;
+  background: linear-gradient(
+    0deg,
+    rgba(10, 10, 10, 0.95) 0%,
+    transparent 100%
+  );
+}
+.galeria-inner {
+  position: relative;
+  z-index: 3;
+  width: min(100%, 1200px);
+  margin: 0 auto;
+  text-align: center;
+}
+.galeria-title {
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(0.75rem, 2vw, 1.5rem);
+}
+.galeria-item {
+  overflow: hidden;
+  border-radius: 12px;
+  border: 1px solid rgba(212, 196, 168, 0.2);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.55);
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease;
+}
+.galeria-item:hover {
+  transform: translateY(-6px) scale(1.01);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.7);
+}
+.galeria-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.galeria-item:hover .galeria-photo {
+  transform: scale(1.04);
+}
+
+/* ══════════════════════════════════════════
+   ── Seção Redes Sociais ──
+   ══════════════════════════════════════════ */
+.section-social {
+  position: relative;
+  isolation: isolate;
+  background-color: #111111;
+  padding: clamp(4rem, 8vw, 6rem) clamp(1rem, 3vw, 2rem);
+}
+.section-social::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: clamp(48px, 8vw, 96px);
+  pointer-events: none;
+  z-index: 2;
+  background: linear-gradient(
+    180deg,
+    rgba(10, 10, 10, 0.95) 0%,
+    transparent 100%
+  );
+}
+.section-social::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: clamp(48px, 8vw, 96px);
+  pointer-events: none;
+  z-index: 2;
+  background: linear-gradient(
+    0deg,
+    rgba(10, 10, 10, 0.92) 0%,
+    transparent 100%
+  );
+}
+.social-inner {
+  position: relative;
+  z-index: 3;
+  width: min(100%, 900px);
+  margin: 0 auto;
+  text-align: center;
+}
+.social-title {
+  margin-bottom: clamp(1.5rem, 3vw, 2rem);
+}
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: clamp(1rem, 3vw, 2.5rem);
+  margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(0.9rem, 1.8vw, 1.05rem);
+  color: var(--beige-light);
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+.social-link img {
+  width: clamp(20px, 2.5vw, 26px);
+  height: clamp(20px, 2.5vw, 26px);
+  filter: brightness(0) saturate(100%) invert(87%) sepia(10%) saturate(500%) hue-rotate(10deg);
+  transition: filter 0.2s ease;
+}
+.social-link:hover {
+  color: var(--white);
+  transform: translateY(-2px);
+}
+.social-link:hover img {
+  filter: brightness(0) invert(1);
+}
+.social-feed-placeholder {
+  margin: 0 auto;
+  max-width: 800px;
+  min-height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(212, 196, 168, 0.18);
+  border-radius: 16px;
+}
+.social-feed-text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.3);
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+/* ══════════════════════════════════════════
+   ── Seção Contato: formulário full-width ──
+   ══════════════════════════════════════════ */
+.contato-info-full {
+  flex: 1 1 100%;
+  max-width: none;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: clamp(5rem, 9vw, 8rem) clamp(1.25rem, 5vw, 5rem);
+  min-height: var(--section-contato-h);
+  background: rgba(10, 10, 10, 0.72);
+  backdrop-filter: blur(6px);
+}
+.contato-form-wrap {
+  width: min(100%, 820px);
+}
+.contato-form-title {
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+.contato-form-subtitle {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(0.9rem, 1.6vw, 1rem);
+  color: rgba(255, 255, 255, 0.75);
+  letter-spacing: 0.02em;
+  text-align: center;
+  margin-bottom: clamp(2rem, 4vw, 2.5rem);
+}
+.contato-form {
+  text-align: left;
+}
+.contato-label {
+  display: block;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(1rem, 1.8vw, 1.15rem);
+  letter-spacing: 0.12em;
+  color: var(--beige);
+  margin-bottom: 0.35rem;
+  text-transform: uppercase;
+}
+.contato-input {
+  display: block;
+  width: 100%;
+  padding: 0.65rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(212, 196, 168, 0.3);
+  border-radius: 8px;
+  color: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(0.88rem, 1.4vw, 0.95rem);
+  transition: border-color 0.2s ease, background 0.2s ease;
+  outline: none;
+  -webkit-appearance: none;
+}
+.contato-input:focus {
+  border-color: var(--beige);
+  background: rgba(212, 196, 168, 0.07);
+}
+.contato-input::placeholder {
+  color: rgba(255, 255, 255, 0.25);
+}
+.contato-input::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+  opacity: 0.5;
+}
+.contato-textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+.contato-submit-btn {
+  width: 100%;
+  max-width: 420px;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  letter-spacing: 0.14em;
+  padding: 0.85rem 2rem;
+}
+.contato-rodape {
+  margin-top: clamp(2.5rem, 5vw, 3.5rem);
+  padding-top: clamp(2rem, 4vw, 2.5rem);
+  border-top: 1px solid rgba(212, 196, 168, 0.2);
+  text-align: center;
+}
+.contato-rodape .contact-logo-photo {
+  max-width: 150px;
+  margin-bottom: clamp(1rem, 2vw, 1.5rem);
+}
+
+/* ── Responsivo: novas seções ── */
+@media (max-width: 992px) {
+  .galeria-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .topbar-cta {
+    justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  .hero-cta-group {
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-cta-group .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+  .shows-inner {
+    border-radius: 34px;
+    padding: 2rem 1.5rem;
+  }
+  .shows-title {
+    font-size: clamp(2rem, 8vw, 3rem);
+  }
+  .galeria-grid {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  .social-links {
+    gap: 1.25rem;
+  }
+  .contato-info-full {
+    padding: 5rem 1rem 4rem;
+  }
+  .contato-form-title {
+    font-size: clamp(1.75rem, 7vw, 2.5rem);
+  }
+}
+@media (max-width: 576px) {
+  .topbar-cta-btn {
+    font-size: 0.72rem;
+    padding: 0.45rem 0.9rem;
+  }
+  .shows-types {
+    gap: 0.45rem;
+  }
+  .show-type-item {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.85rem;
+  }
+}
