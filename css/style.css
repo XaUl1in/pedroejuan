@@ -1337,6 +1337,44 @@ html {
   letter-spacing: 0.14em;
   padding: 0.85rem 2rem;
 }
+/* ── WhatsApp CTA ── */
+.contato-whatsapp {
+  display: flex;
+  justify-content: center;
+  margin: clamp(1.5rem, 3vw, 2.5rem) 0 clamp(1rem, 2vw, 1.5rem);
+}
+.contato-whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  max-width: 420px;
+  width: 100%;
+  font-size: clamp(1.1rem, 2.2vw, 1.35rem);
+  letter-spacing: 0.14em;
+  padding: 1rem 2.25rem;
+  border-color: #4caf50;
+  color: #4caf50;
+  transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease, transform 0.2s ease, box-shadow 0.25s ease;
+  animation: whatsapp-pulse 2.8s ease-in-out infinite;
+}
+.contato-whatsapp-btn:hover {
+  background-color: #4caf50;
+  border-color: #4caf50;
+  color: var(--white);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 32px rgba(76, 175, 80, 0.35);
+  animation: none;
+}
+.contato-whatsapp-icon {
+  width: clamp(22px, 2.5vw, 28px);
+  height: clamp(22px, 2.5vw, 28px);
+  flex-shrink: 0;
+}
+@keyframes whatsapp-pulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(76, 175, 80, 0); }
+  50%       { box-shadow: 0 0 0 8px rgba(76, 175, 80, 0.18); }
+}
 .contato-rodape {
   margin-top: clamp(2.5rem, 5vw, 3.5rem);
   padding-top: clamp(2rem, 4vw, 2.5rem);
