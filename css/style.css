@@ -14,12 +14,25 @@
   --section-contato-h: clamp(620px, 52vw, 860px);
   --content-max: 960px;
 }
+:root {
+  --bp-sm: 36rem;
+  --bp-md: 48rem;
+  --bp-lg: 62rem;
+}
+
 * {
   box-sizing: border-box;
 }
-img {
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+img,
+iframe,
+video {
   max-width: 100%;
   height: auto;
+  display: block;
 }
 body {
   margin: 0;
@@ -29,8 +42,8 @@ body {
   font-family: "Bebas Neue", sans-serif;
   overflow-x: hidden;
 }
-html {
-  scroll-behavior: smooth;
+.site-main {
+  display: block;
 }
 /* ── Transições entre seções ── */
 .section-panel {
